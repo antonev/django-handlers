@@ -12,14 +12,7 @@ def pytest_configure():
         },
         SITE_ID=1,
         SECRET_KEY='secret',
-        # USE_I18N=True,
-        # USE_L10N=True,
-        # STATIC_URL='/static/',
         ROOT_URLCONF='tests.urls',
-        # TEMPLATE_LOADERS=(
-        #     'django.template.loaders.filesystem.Loader',
-        #     'django.template.loaders.app_directories.Loader',
-        # ),
         MIDDLEWARE_CLASSES=(
             'django.middleware.common.CommonMiddleware',
             'django.contrib.sessions.middleware.SessionMiddleware',
@@ -33,9 +26,6 @@ def pytest_configure():
             'django.contrib.sites',
             'django.contrib.staticfiles',
         ),
-        # PASSWORD_HASHERS=(
-        #     'django.contrib.auth.hashers.MD5PasswordHasher',
-        # ),
     )
 
     django.setup()
