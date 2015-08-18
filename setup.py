@@ -5,7 +5,7 @@ except ImportError:
 
 
 setup(
-    name='django_handlers',
+    name='django-handlers',
     version=__import__('django_handlers').__version__,
     url='https://github.com/antonev/django_handlers',
     license='MIT',
