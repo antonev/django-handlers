@@ -9,7 +9,7 @@ Welcome to Django Handlers documentation!
 This library makes it possible to have many views
 associated with one URL (separate view for each
 HTTP method). It can be used for creation of REST APIs
-or just for simplification of views in Django app.
+or just for simplification of views in a Django application.
 
 So, instead of writing this::
     
