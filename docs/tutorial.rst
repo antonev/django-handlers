@@ -63,7 +63,7 @@ Let's add to the same endpoint a view for handling of POST requests::
             record = form.save()
             return JsonResponse(record.data)
 
-        return JsonResponse(form.errors, status_code=422)
+        return JsonResponse(form.errors, status=422)
 
 
 Now we have endpoint 'records' with two views.
@@ -91,7 +91,7 @@ to url '/records/'. Let's add views to another endpoint::
         form = RecordForm(json.loads(request.body), instance=record)
 
         if not form.is_valid():
-            return JsonResponse(form.errors, status_code=422)
+            return JsonResponse(form.errors, status=422)
 
         form.save()
         return JsonResponse({})
@@ -143,7 +143,7 @@ We can decrease it by using hooks::
         form = RecordForm(json.loads(request.body), instance=request.record)
 
         if not form.is_valid():
-            return JsonResponse(form.errors, status_code=422)
+            return JsonResponse(form.errors, status=422)
 
         form.save()
         return JsonResponse({})

@@ -29,7 +29,7 @@ So, instead of writing this::
                 record = form.save()
                 return JsonResponse(record.data)
             else:
-                return JsonResponse(form.errors, status_code=422)
+                return JsonResponse(form.errors, status=422)
 
         return HttpResponseNotAllowed(['GET', 'POST'])
 
@@ -38,8 +38,8 @@ So, instead of writing this::
 
     from .views import records_view
 
-    urlpatterns = [''
-        (r'^records/$', records_view),
+    urlpatterns = [
+        url(r'^records/$', records_view),
     ]
 
 
@@ -68,15 +68,15 @@ you can write this::
             record = form.save()
             return JsonResponse(record.data)
         
-        return JsonResponse(form.errors, status_code=422)
+        return JsonResponse(form.errors, status=422)
 
 
     # urls.py
 
     from .views import handler
 
-    urlpatterns = [''
-        (r'^records/$', handler.records),
+    urlpatterns = [
+        url(r'^records/$', handler.records),
     ]
 
 
