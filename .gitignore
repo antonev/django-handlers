@@ -1,0 +1,8 @@
+.DS_Store
+*.pyc
+*.pyo
+.coverage
+.tox
+dist
+django_handlers.egg-info
+docs/_build
