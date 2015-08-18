@@ -8,7 +8,7 @@ from collections import (
 from django.http import HttpResponseNotAllowed
 
 
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 
 class Handler(object):
